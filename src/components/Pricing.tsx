@@ -2,31 +2,52 @@
 
 const PLANS = [
   {
-    name: "Free",
+    name: "FREE",
     ko: "무료",
     price: "₩0",
-    period: "/월",
-    desc: "일단 가볍게 시작",
-    features: ["주 3편 무료 시청", "720p 화질", "광고 포함", "모바일 전용"],
+    period: "/시작가",
+    desc: "일단 가볍게 맛보기",
+    features: [
+      "모든 시리즈 1화 무료",
+      "광고 시청 시 추가 화 해제",
+      "표준 화질 (HD)",
+      "모바일 전용",
+    ],
     highlight: false,
+    cta: "무료로 시작",
   },
   {
-    name: "Premium",
-    ko: "프리미엄",
-    price: "₩9,900",
-    period: "/월",
-    desc: "애니 팬을 위한 표준",
-    features: ["무제한 시청", "1080p Full HD", "광고 없음", "모든 디바이스", "오프라인 저장"],
+    name: "COINS",
+    ko: "코인 충전",
+    price: "₩1,100",
+    period: "= 100 코인",
+    desc: "충전한 만큼 본다",
+    features: [
+      "1화 = 10코인",
+      "광고 없음",
+      "풀 HD 화질",
+      "모든 디바이스",
+      "원하는 작품만 골라보기",
+    ],
     highlight: true,
+    cta: "코인 충전하기",
   },
   {
-    name: "Premium+",
-    ko: "프리미엄+",
+    name: "UNLIMITED",
+    ko: "무제한 멤버십",
     price: "₩14,900",
     period: "/월",
-    desc: "진짜 오타쿠의 선택",
-    features: ["무제한 시청", "4K HDR", "광고 없음", "모든 디바이스", "오프라인 저장", "신작 우선 공개", "한정 굿즈 할인"],
+    desc: "헤비 시청자 추천",
+    features: [
+      "모든 작품 무제한 시청",
+      "신작 우선 시청 (24시간 먼저)",
+      "풀 HD + 다운로드",
+      "광고 없음",
+      "모든 디바이스",
+      "독점 콘텐츠 액세스",
+    ],
     highlight: false,
+    cta: "멤버십 가입",
   },
 ];
 
@@ -37,14 +58,15 @@ export default function Pricing() {
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         <div className="text-center mb-14">
-          <div className="section-label mb-4">
+          <div className="section-label mb-4 font-[family-name:var(--font-anton)] tracking-wider">
             <span className="w-2 h-2 bg-red" />
-            PRICING · 요금제
+            PRICING · 요금
           </div>
           <h2 className="text-5xl sm:text-6xl tracking-tight mb-3 text-black font-han">
-            심플한 가격 정책
+            요금
           </h2>
-          <p className="text-navy font-do text-lg">심플한 가격. 복잡한 거 싫어하니까.</p>
+          <p className="text-navy font-[family-name:var(--font-archivo)] tracking-wide text-sm mb-2">PRICING</p>
+          <p className="text-navy font-do text-lg">무료로 시작 · 충전한 만큼 시청 · 또는 무제한.</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 items-stretch">
@@ -68,8 +90,8 @@ export default function Pricing() {
               >
                 <div className="relative">
                   <div className="mb-6">
-                    <div className="text-xs uppercase tracking-[0.3em] text-red mb-1 font-black">{plan.ko}</div>
-                    <h3 className="text-4xl mb-1 text-black font-han">{plan.name}</h3>
+                    <div className="text-xs uppercase tracking-[0.3em] text-red mb-1 font-[family-name:var(--font-anton)]">{plan.ko}</div>
+                    <h3 className="text-4xl mb-1 text-black font-[family-name:var(--font-archivo)] tracking-tight">{plan.name}</h3>
                     <p className="text-sm text-navy font-do">{plan.desc}</p>
                   </div>
 
@@ -92,7 +114,7 @@ export default function Pricing() {
                   </ul>
 
                   <button className={plan.highlight ? "btn-primary w-full justify-center" : "btn-secondary w-full justify-center"}>
-                    {plan.highlight ? "지금 시작하기" : "선택하기"}
+                    {plan.cta}
                   </button>
                 </div>
               </div>
@@ -101,7 +123,7 @@ export default function Pricing() {
         </div>
 
         <p className="text-center text-navy text-xs mt-10 font-do">
-          언제든 해지 가능 · VAT 포함
+          코인은 사용 기한 없음 · 멤버십은 언제든 해지 가능 · VAT 포함
         </p>
       </div>
     </section>

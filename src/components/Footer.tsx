@@ -11,46 +11,47 @@ export default function Footer() {
                 <span className="w-10 h-10 bg-red border-2 border-white flex items-center justify-center font-black text-white font-display">
                   A
                 </span>
-                <span className="text-xl font-black text-white">Anirift</span>
+                <span className="text-2xl font-display text-white tracking-tight">ANI RIFT</span>
                 <span className="text-xs text-gold font-han ml-1">
                   애니리프트
                 </span>
               </div>
-              <p className="text-xl text-white leading-relaxed max-w-sm mb-5 font-han">
-                차원을 넘는 애니 체험.
+              <p className="text-xl text-white leading-relaxed max-w-sm mb-3 font-han">
+                1분의 몰입, 매일의 습관.
               </p>
-              <p className="text-sm text-white/80 max-w-sm font-do">
-                숏폼 애니메이션 전용 차세대 OTT.
+              <p className="text-sm text-gold mb-4 font-[family-name:var(--font-archivo)] tracking-wider">
+                ONE MINUTE. EVERY DAY.
+              </p>
+              <p className="text-xs text-white/70 max-w-sm font-[family-name:var(--font-anton)] tracking-wider uppercase">
+                SHORT-FORM ANIME STREAMING
               </p>
             </div>
 
             <div>
-              <h4 className="text-xs uppercase tracking-[0.2em] text-gold mb-4 font-han">작품 · CONTENT</h4>
+              <h4 className="text-xs uppercase tracking-[0.2em] text-gold mb-4 font-[family-name:var(--font-anton)]">SERVICE · 서비스</h4>
               <ul className="space-y-2.5 text-sm text-white font-do">
-                <li><a href="#" className="hover:text-gold">추천 작품</a></li>
-                <li><a href="#" className="hover:text-gold">인기 랭킹</a></li>
-                <li><a href="#" className="hover:text-gold">신작</a></li>
-                <li><a href="#" className="hover:text-gold">장르별</a></li>
+                <li><a href="#" className="hover:text-gold">시리즈</a></li>
+                <li><a href="#" className="hover:text-gold">코인</a></li>
+                <li><a href="#" className="hover:text-gold">멤버십</a></li>
+                <li><a href="#" className="hover:text-gold">FAQ</a></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="text-xs uppercase tracking-[0.2em] text-gold mb-4 font-han">회사 · COMPANY</h4>
+              <h4 className="text-xs uppercase tracking-[0.2em] text-gold mb-4 font-[family-name:var(--font-anton)]">COMPANY · 회사</h4>
               <ul className="space-y-2.5 text-sm text-white font-do">
                 <li><a href="#" className="hover:text-gold">소개</a></li>
                 <li><a href="#" className="hover:text-gold">채용</a></li>
-                <li><a href="#" className="hover:text-gold">보도자료</a></li>
-                <li><a href="#" className="hover:text-gold">문의하기</a></li>
+                <li><a href="#" className="hover:text-gold">제휴 문의</a></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="text-xs uppercase tracking-[0.2em] text-gold mb-4 font-han">지원 · SUPPORT</h4>
+              <h4 className="text-xs uppercase tracking-[0.2em] text-gold mb-4 font-[family-name:var(--font-anton)]">LEGAL · 법적 고지</h4>
               <ul className="space-y-2.5 text-sm text-white font-do">
-                <li><a href="#" className="hover:text-gold">고객센터</a></li>
                 <li><a href="#" className="hover:text-gold">이용약관</a></li>
                 <li><a href="#" className="hover:text-gold">개인정보</a></li>
-                <li><a href="#" className="hover:text-gold">쿠키정책</a></li>
+                <li><a href="#" className="hover:text-gold">청소년보호</a></li>
               </ul>
             </div>
           </div>
@@ -59,15 +60,15 @@ export default function Footer() {
 
           <div className="flex flex-wrap items-center justify-between gap-4 text-xs text-white/80 font-do">
             <div className="flex items-center gap-4">
-              <span>© 2026 Anirift. All rights reserved.</span>
+              <span>© 2026 ANI RIFT. All rights reserved.</span>
               <span className="hidden sm:inline">·</span>
               <span className="hidden sm:inline font-han">
-                모든 애니 팬들에게 사랑을 담아 🌸
+                매일 1분, 새로운 한 화 🌸
               </span>
             </div>
 
             <div className="flex items-center gap-3">
-              {["X", "IG", "YT", "DC"].map(s => (
+              {["X", "IG", "YT", "TT"].map(s => (
                 <a
                   key={s}
                   href="#"

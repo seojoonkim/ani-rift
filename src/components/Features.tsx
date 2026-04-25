@@ -2,70 +2,69 @@
 
 const ITEMS = [
   {
-    icon: "⚡",
-    ko: "숏폼 전용",
-    en: "SHORT-FORM ONLY",
-    desc: "5분 안에 끝나는 한 화. 출퇴근길, 쉬는 시간. 언제든 가볍게 몰입하세요.",
+    icon: "⏱️",
+    ko: "60초 1화",
+    en: "60 SECONDS PER EP",
+    desc: "출퇴근, 점심시간, 잠들기 전 — 짧고 강렬하게 한 화. 길어서 부담스러운 애니는 이제 그만.",
   },
   {
-    icon: "✨",
-    ko: "AI 추천",
-    en: "AI RECOMMEND",
-    desc: "당신의 취향을 학습하는 AI 큐레이터. 다음 에피소드는 언제나 당신의 것.",
+    icon: "📅",
+    ko: "매일 새 회차",
+    en: "NEW EVERY DAY",
+    desc: "기다림 없이 매일 다음 화. 시즌제로 끝까지. 한 번 빠지면 멈출 수 없는 클리프행어.",
   },
   {
-    icon: "🌐",
-    ko: "크로스 디바이스",
-    en: "ALL DEVICES",
-    desc: "모바일·태블릿·TV·비전프로까지. 한 번 로그인하면 어디서든 이어보기.",
+    icon: "📱",
+    ko: "세로 화면 전용",
+    en: "VERTICAL FIRST",
+    desc: "스마트폰에 최적화된 세로 애니 경험. 한 손으로, 어디서든. 가로로 돌릴 필요 없음.",
+  },
+  {
+    icon: "🎁",
+    ko: "첫 화는 무조건 무료",
+    en: "EP.1 ALWAYS FREE",
+    desc: "코인 부담 없이 모든 시리즈 첫 화 무료 시청. 마음에 들면 그때부터 결제.",
   },
 ];
 
 export default function Features() {
   return (
     <section id="why" className="relative py-24 overflow-hidden bg-mint border-b-4 border-black">
-      <div className="absolute top-[10%] right-[3%] text-[20vw] leading-none kanji-deco-light">특</div>
+      <div className="absolute top-[10%] right-[3%] text-[20vw] leading-none kanji-deco-light">왜</div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-14">
-          <div className="section-label-light mb-4">
+          <div className="section-label-light mb-4 font-[family-name:var(--font-anton)] tracking-wider">
             <span className="w-2 h-2 bg-red" />
-            WHY ANIRIFT · 특징
+            WHY ANI RIFT · 왜 ANI RIFT인가
           </div>
           <h2 className="text-5xl sm:text-6xl tracking-tight mb-3 text-black leading-tight font-han">
-            새로운 방식으로
+            왜 ANI RIFT인가
             <br />
-            <span className="text-red">애니를 즐기다</span>
+            <span className="text-red font-[family-name:var(--font-archivo)] text-4xl sm:text-5xl tracking-tight">WHY ANI RIFT</span>
           </h2>
           <p className="text-black/85 max-w-2xl mx-auto font-do text-lg">
-            긴 호흡이 부담스러운 시대. Anirift는 짧고 강렬한 에피소드로 애니의 본질만 전합니다.
+            긴 호흡이 부담스러운 시대. 1분 안에 끝나는 한 화로 애니의 본질만 전합니다.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
           {ITEMS.map((item) => (
             <div
               key={item.ko}
-              className="pop-card p-8 relative"
+              className="pop-card p-7 relative"
             >
-              <div className="w-16 h-16 bg-red border-3 border-black border-2 flex items-center justify-center text-3xl mb-6">
+              <div className="w-14 h-14 bg-red border-3 border-black border-2 flex items-center justify-center text-2xl mb-5">
                 {item.icon}
               </div>
 
-              <h3 className="text-3xl mb-1.5 text-black font-han">
+              <h3 className="text-2xl mb-1.5 text-black font-han leading-tight">
                 {item.ko}
               </h3>
-              <div className="text-sm text-red mb-4 tracking-wider uppercase font-black">{item.en}</div>
+              <div className="text-xs text-red mb-3 tracking-wider uppercase font-[family-name:var(--font-anton)]">{item.en}</div>
               <p className="text-navy leading-relaxed text-sm font-do">
                 {item.desc}
               </p>
-
-              <div className="mt-6 pt-4 border-t-3 border-black border-t-2 flex items-center gap-2 text-sm text-black font-han uppercase tracking-wider">
-                자세히 보기
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" aria-hidden="true">
-                  <path d="M5 12h14M13 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
             </div>
           ))}
         </div>

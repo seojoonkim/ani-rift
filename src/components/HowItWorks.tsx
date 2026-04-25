@@ -3,24 +3,24 @@
 const STEPS = [
   {
     num: "01",
-    ko: "가입하기",
+    ko: "무료 가입",
     en: "SIGN UP",
-    desc: "30초면 끝. 이메일만 있으면 OK.",
+    desc: "이메일 한 번이면 끝. 30초도 안 걸려요.",
     icon: "✍️",
   },
   {
     num: "02",
-    ko: "취향 선택",
-    en: "PICK TASTE",
-    desc: "좋아하는 장르 몇 개만 체크. AI가 나머지를 책임집니다.",
-    icon: "💫",
+    ko: "시리즈 골라 첫 화 시청",
+    en: "PICK & PLAY",
+    desc: "모든 시리즈 1화는 무료. 마음에 드는 작품을 찾을 때까지 부담 없이.",
+    icon: "▶️",
   },
   {
     num: "03",
-    ko: "즐기기",
-    en: "ENJOY",
-    desc: "매일 쏟아지는 새 에피소드. 5분만 투자하세요.",
-    icon: "▶️",
+    ko: "코인으로 다음 화",
+    en: "UNLOCK NEXT",
+    desc: "코인 충전 또는 멤버십으로 무제한. 매일 새 회차가 기다립니다.",
+    icon: "🪙",
   },
 ];
 
@@ -29,14 +29,15 @@ export default function HowItWorks() {
     <section className="relative py-24 overflow-hidden bg-navy border-b-4 border-black">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-14">
-          <div className="section-label-light mb-4">
+          <div className="section-label-light mb-4 font-[family-name:var(--font-anton)] tracking-wider">
             <span className="w-2 h-2 bg-gold" />
-            HOW IT WORKS · 사용 방법
+            HOW IT WORKS · 어떻게 시작하나요
           </div>
           <h2 className="text-5xl sm:text-6xl tracking-tight text-white font-han">
             <span>3단계로</span>
             <span className="text-gold"> 시작</span>
           </h2>
+          <p className="mt-3 text-white/85 font-[family-name:var(--font-archivo)] tracking-wide text-sm">START IN 3 STEPS</p>
         </div>
 
         <div className="relative grid md:grid-cols-3 gap-6">
@@ -51,10 +52,10 @@ export default function HowItWorks() {
                     {step.icon}
                   </div>
                 </div>
-                <h3 className="text-3xl mb-1 text-black font-han">
+                <h3 className="text-2xl mb-1 text-black font-han leading-tight">
                   {step.ko}
                 </h3>
-                <div className="text-sm text-red uppercase tracking-wider mb-3 font-black">{step.en}</div>
+                <div className="text-sm text-red uppercase tracking-wider mb-3 font-[family-name:var(--font-anton)]">{step.en}</div>
                 <p className="text-navy text-sm leading-relaxed font-do">{step.desc}</p>
               </div>
             </div>
