@@ -40,7 +40,7 @@ export default function Pricing() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-14">
           <div className="section-label mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#FF4D8D]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#E63946]" />
             Pricing · 料金
           </div>
           <h2 className="text-4xl sm:text-5xl font-black tracking-tight mb-3">
@@ -61,7 +61,7 @@ export default function Pricing() {
             >
               {plan.highlight && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-20">
-                  <span className="px-3 py-1 rounded-full bg-gradient-to-r from-[#FF4D8D] to-[#6366F1] text-xs font-bold tracking-widest shadow-[0_6px_20px_rgba(255,77,141,0.4)]">
+                  <span className="px-3 py-1 rounded-full bg-gradient-to-r from-[#E63946] to-[#F4A261] text-xs font-bold tracking-widest shadow-[0_6px_20px_rgba(230,57,70,0.4)]">
                     人気 · POPULAR
                   </span>
                 </div>
@@ -69,11 +69,11 @@ export default function Pricing() {
 
               <div
                 className={`glass-card p-7 h-full flex flex-col relative overflow-hidden ${
-                  plan.highlight ? "border-[#FF4D8D]/40" : ""
+                  plan.highlight ? "border-[#E63946]/40" : ""
                 }`}
               >
                 {plan.highlight && (
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#FF4D8D]/10 via-transparent to-[#6366F1]/10 pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#E63946]/10 via-transparent to-[#F4A261]/10 pointer-events-none" />
                 )}
 
                 <div className="relative">
@@ -93,7 +93,7 @@ export default function Pricing() {
                   <ul className="space-y-3 mb-8 flex-1">
                     {plan.features.map(f => (
                       <li key={f} className="flex items-start gap-2.5 text-sm text-white/75">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="flex-shrink-0 mt-0.5 text-[#06B6D4]" aria-hidden="true">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="flex-shrink-0 mt-0.5 text-[#2A9D8F]" aria-hidden="true">
                           <path d="M20 6L9 17l-5-5" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                         {f}

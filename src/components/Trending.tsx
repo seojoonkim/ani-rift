@@ -9,7 +9,7 @@ export default function Trending() {
         <div className="mb-10 flex items-end justify-between gap-4 flex-wrap">
           <div>
             <div className="section-label mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#FF4D8D]" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#E63946]" />
               Popular This Week · 今週の人気
             </div>
             <h2 className="text-4xl sm:text-5xl font-black tracking-tight">
@@ -38,23 +38,23 @@ export default function Trending() {
 
               <div className="relative z-10 h-full flex flex-col justify-between p-7 sm:p-10">
                 <div className="flex items-center gap-2">
-                  <span className="px-2.5 py-1 rounded-full bg-white/15 backdrop-blur-md text-[10px] font-bold tracking-wider text-white border border-white/20">
+                  <span className="px-2.5 py-1 rounded-full bg-[#F4A261] backdrop-blur-md text-[10px] font-black tracking-wider text-[#0D1117] border border-[#F4A261]">
                     #1 TRENDING
                   </span>
-                  <span className="px-2.5 py-1 rounded-full bg-[#FF4D8D]/80 backdrop-blur-md text-[10px] font-bold tracking-wider text-white">
+                  <span className="px-2.5 py-1 rounded-full bg-[#E63946] backdrop-blur-md text-[10px] font-black tracking-wider text-[#FFF8F0]">
                     人気 · HOT
                   </span>
                 </div>
 
                 <div>
-                  <div className="text-xs tracking-[0.3em] uppercase text-white/70 mb-3">Episode 04 · 最新話</div>
-                  <h3 className="text-4xl sm:text-6xl font-black mb-2 leading-[0.95]" style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>
+                  <div className="text-xs tracking-[0.3em] uppercase text-[#F4A261] mb-3 font-bold">Episode 04 · 最新話</div>
+                  <h3 className="text-4xl sm:text-6xl mb-2 leading-[0.95] font-reggae text-[#FFF8F0]">
                     桜夜の刃
                   </h3>
-                  <p className="text-white/70 text-lg mb-5">사쿠라 밤의 칼날 — 벚꽃 흩날리는 밤, 칼은 운명을 갈랐다.</p>
+                  <p className="text-[#FFF8F0]/80 text-lg mb-5">사쿠라 밤의 칼날 — 벚꽃 흩날리는 밤, 칼은 운명을 갈랐다.</p>
                   <div className="flex flex-wrap gap-2 mb-5">
                     {["Action", "Historical", "Drama"].map(t => (
-                      <span key={t} className="px-2.5 py-1 rounded-full bg-white/10 backdrop-blur-md text-xs text-white/80 border border-white/10">
+                      <span key={t} className="px-2.5 py-1 rounded-full bg-[#1D2B4A]/80 backdrop-blur-md text-xs text-[#F4A261] border border-[#F4A261]/30">
                         {t}
                       </span>
                     ))}
@@ -83,16 +83,16 @@ export default function Trending() {
               className="col-span-3 md:col-span-1 relative group cursor-pointer"
             >
               <div className={`poster ${item.cls} poster-glow h-full`}>
-                <div className="absolute top-2.5 right-2.5 z-10 text-3xl font-black text-white/90 leading-none"
-                     style={{ WebkitTextStroke: "1px rgba(0,0,0,0.3)" }}>
+                <div className="absolute top-2.5 right-2.5 z-10 text-3xl font-black text-[#F4A261] leading-none font-display"
+                     style={{ WebkitTextStroke: "1px rgba(13,17,23,0.5)" }}>
                   {item.rank}
                 </div>
                 <div className="absolute bottom-2.5 left-2.5 right-2.5 z-10">
-                  <div className="text-[9px] tracking-widest uppercase text-white/70 mb-0.5">{item.ep}</div>
-                  <div className="text-white font-bold text-sm leading-tight" style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>
+                  <div className="text-[9px] tracking-widest uppercase text-[#F4A261] mb-0.5 font-bold">{item.ep}</div>
+                  <div className="text-[#FFF8F0] text-sm leading-tight font-reggae">
                     {item.jp}
                   </div>
-                  <div className="text-white/60 text-[10px] leading-tight">{item.ko}</div>
+                  <div className="text-[#FFF8F0]/65 text-[10px] leading-tight">{item.ko}</div>
                 </div>
               </div>
             </motion.div>

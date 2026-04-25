@@ -19,18 +19,18 @@ export default function Featured() {
       <div className="max-w-7xl mx-auto px-6 mb-10 flex items-end justify-between gap-6 flex-wrap">
         <div>
           <div className="section-label mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#6366F1]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#F4A261]" />
             Featured Anime · 注目作品
           </div>
-          <h2 className="text-4xl sm:text-5xl font-black tracking-tight">
-            <span style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>注目の作品</span>
+          <h2 className="text-4xl sm:text-5xl tracking-tight font-reggae text-[#FFF8F0]">
+            注目の作品
           </h2>
-          <p className="mt-2 text-white/60">큐레이션이 직접 고른 이번 주의 하이라이트</p>
+          <p className="mt-2 text-[#FFF8F0]/60">큐레이션이 직접 고른 이번 주의 하이라이트</p>
         </div>
-        <div className="flex items-center gap-2 text-sm text-white/60">
-          <button className="glass px-3 py-2 hover:text-white transition-colors" aria-label="Previous">←</button>
-          <button className="glass px-3 py-2 hover:text-white transition-colors" aria-label="Next">→</button>
-          <a href="#" className="ml-2 hover:text-white transition-colors">もっと見る →</a>
+        <div className="flex items-center gap-2 text-sm text-[#FFF8F0]/65">
+          <button className="glass px-3 py-2 hover:text-[#F4A261] transition-colors" aria-label="Previous">←</button>
+          <button className="glass px-3 py-2 hover:text-[#F4A261] transition-colors" aria-label="Next">→</button>
+          <a href="#" className="ml-2 hover:text-[#F4A261] transition-colors">もっと見る →</a>
         </div>
       </div>
 
@@ -48,16 +48,16 @@ export default function Featured() {
               >
                 <div className={`poster ${item.cls} poster-glow tilt`}>
                   <div className="absolute top-3 left-3 z-10">
-                    <span className="text-[10px] font-medium tracking-wider uppercase px-2 py-0.5 rounded-full bg-black/40 backdrop-blur-md text-white/90 border border-white/10">
+                    <span className="text-[10px] font-bold tracking-wider uppercase px-2 py-0.5 rounded-full bg-[#0D1117]/70 backdrop-blur-md text-[#F4A261] border border-[#F4A261]/30">
                       {item.tag}
                     </span>
                   </div>
                   <div className="absolute bottom-3 left-3 right-3 z-10">
-                    <div className="text-[10px] tracking-widest uppercase text-white/70 mb-0.5">{item.ep}</div>
-                    <div className="text-white font-bold" style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>
+                    <div className="text-[10px] tracking-widest uppercase text-[#F4A261] mb-0.5 font-bold">{item.ep}</div>
+                    <div className="text-[#FFF8F0] font-reggae">
                       {item.jp}
                     </div>
-                    <div className="text-white/60 text-xs">{item.ko}</div>
+                    <div className="text-[#FFF8F0]/65 text-xs">{item.ko}</div>
                   </div>
                 </div>
               </motion.div>
@@ -66,8 +66,8 @@ export default function Featured() {
         </div>
 
         {/* Edge fades */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-[#0a0a14] to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-[#0a0a14] to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-[#0D1117] to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-[#0D1117] to-transparent" />
       </div>
     </section>
   );

@@ -23,7 +23,7 @@ export default function Hero() {
             className="inline-flex mb-6"
           >
             <span className="section-label">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#FF4D8D] animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#E63946] animate-pulse" />
               Now Streaming · 配信中
             </span>
           </motion.div>
@@ -32,7 +32,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-[clamp(3.5rem,10vw,8rem)] leading-[0.95] font-black tracking-tight mb-4"
+            className="text-[clamp(3.5rem,10vw,8rem)] leading-[0.95] tracking-tight mb-4 font-display"
           >
             <span className="block gradient-text">ANI</span>
             <span className="block gradient-text">RIFT</span>
@@ -42,8 +42,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.25 }}
-            className="text-lg sm:text-xl text-white/80 mb-3 font-light"
-            style={{ fontFamily: "'Noto Sans JP', sans-serif" }}
+            className="text-lg sm:text-xl text-[#FFF8F0]/85 mb-3 font-reggae"
           >
             次元を超えるアニメ体験。
           </motion.p>
@@ -52,10 +51,10 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="text-base sm:text-lg text-white/60 mb-10 max-w-xl mx-auto lg:mx-0"
+            className="text-base sm:text-lg text-[#FFF8F0]/60 mb-10 max-w-xl mx-auto lg:mx-0"
           >
             차원을 넘는 애니 체험. 숏폼 애니메이션 전용 OTT,{" "}
-            <span className="text-white">매주 새로운 에피소드</span>가 당신을 기다립니다.
+            <span className="text-[#F4A261] font-semibold">매주 새로운 에피소드</span>가 당신을 기다립니다.
           </motion.p>
 
           <motion.div
@@ -82,21 +81,21 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.6 }}
-            className="mt-12 flex items-center gap-6 justify-center lg:justify-start text-sm text-white/50"
+            className="mt-12 flex items-center gap-6 justify-center lg:justify-start text-sm text-[#FFF8F0]/55"
           >
             <div className="flex items-center gap-2">
               <div className="flex -space-x-2">
-                <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[#FF4D8D] to-[#6366F1] border-2 border-[#0a0a14]" />
-                <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[#6366F1] to-[#06B6D4] border-2 border-[#0a0a14]" />
-                <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[#06B6D4] to-[#8B5CF6] border-2 border-[#0a0a14]" />
+                <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[#E63946] to-[#F4A261] border-2 border-[#0D1117]" />
+                <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[#1D2B4A] to-[#2A9D8F] border-2 border-[#0D1117]" />
+                <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[#F4A261] to-[#E63946] border-2 border-[#0D1117]" />
               </div>
               <span>
-                <span className="text-white font-semibold">120K+</span> watching now
+                <span className="text-[#FFF8F0] font-bold">120K+</span> watching now
               </span>
             </div>
             <div className="hidden sm:flex items-center gap-1.5">
-              <span className="text-[#FF4D8D]">★</span>
-              <span><span className="text-white font-semibold">4.9</span> · 評価</span>
+              <span className="text-[#F4A261]">★</span>
+              <span><span className="text-[#FFF8F0] font-bold">4.9</span> · 評価</span>
             </div>
           </motion.div>
         </div>
@@ -111,9 +110,9 @@ export default function Hero() {
           >
             <div className="poster poster-2 poster-glow">
               <div className="absolute inset-0 flex flex-col justify-end p-4 z-10">
-                <span className="text-[10px] tracking-widest text-white/80 uppercase mb-1">Episode 03</span>
-                <span className="text-white font-bold text-sm" style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>星の記憶</span>
-                <span className="text-white/60 text-xs">별의 기억</span>
+                <span className="text-[10px] tracking-widest text-[#F4A261] uppercase mb-1 font-bold">Episode 03</span>
+                <span className="text-[#FFF8F0] font-bold text-sm font-reggae">星の記憶</span>
+                <span className="text-[#FFF8F0]/65 text-xs">별의 기억</span>
               </div>
               <div className="absolute inset-0 shimmer pointer-events-none" />
             </div>
@@ -127,12 +126,12 @@ export default function Hero() {
           >
             <div className="poster poster-7 poster-glow">
               <div className="absolute top-3 left-3 z-10">
-                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-white">NEW · 新作</span>
+                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#E63946] backdrop-blur-md text-[#FFF8F0]">NEW · 新作</span>
               </div>
               <div className="absolute inset-0 flex flex-col justify-end p-4 z-10">
-                <span className="text-[10px] tracking-widest text-white/80 uppercase mb-1">Featured</span>
-                <span className="text-white font-black text-lg" style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>桜夜の刃</span>
-                <span className="text-white/70 text-xs">사쿠라 밤의 칼날</span>
+                <span className="text-[10px] tracking-widest text-[#F4A261] uppercase mb-1 font-bold">Featured</span>
+                <span className="text-[#FFF8F0] text-lg font-reggae">桜夜の刃</span>
+                <span className="text-[#FFF8F0]/75 text-xs">사쿠라 밤의 칼날</span>
               </div>
               <div className="absolute inset-0 shimmer pointer-events-none" />
             </div>
@@ -146,9 +145,9 @@ export default function Hero() {
           >
             <div className="poster poster-3 poster-glow">
               <div className="absolute inset-0 flex flex-col justify-end p-4 z-10">
-                <span className="text-[10px] tracking-widest text-white/80 uppercase mb-1">Episode 07</span>
-                <span className="text-white font-bold text-sm" style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>電脳東京2089</span>
-                <span className="text-white/60 text-xs">전뇌 도쿄 2089</span>
+                <span className="text-[10px] tracking-widest text-[#F4A261] uppercase mb-1 font-bold">Episode 07</span>
+                <span className="text-[#FFF8F0] font-bold text-sm font-reggae">電脳東京2089</span>
+                <span className="text-[#FFF8F0]/65 text-xs">전뇌 도쿄 2089</span>
               </div>
               <div className="absolute inset-0 shimmer pointer-events-none" />
             </div>
@@ -161,12 +160,12 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.65 }}
             className="absolute bottom-[2%] left-1/2 -translate-x-1/2 glass-strong px-5 py-3 flex items-center gap-3 whitespace-nowrap"
           >
-            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#FF4D8D] to-[#6366F1] flex items-center justify-center text-xs font-black">
+            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#E63946] to-[#F4A261] flex items-center justify-center text-xs font-black text-[#FFF8F0]">
               ▶
             </div>
             <div className="text-left">
-              <div className="text-[10px] uppercase tracking-widest text-white/50">Playing Next</div>
-              <div className="text-sm font-semibold">桜夜の刃 — EP.04</div>
+              <div className="text-[10px] uppercase tracking-widest text-[#F4A261]">Playing Next</div>
+              <div className="text-sm font-bold font-reggae">桜夜の刃 — EP.04</div>
             </div>
           </motion.div>
         </div>
@@ -177,10 +176,10 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/40 text-[11px] tracking-[0.3em] uppercase flex flex-col items-center gap-2"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 text-[#F4A261]/60 text-[11px] tracking-[0.3em] uppercase flex flex-col items-center gap-2"
       >
         <span>Scroll</span>
-        <div className="w-px h-8 bg-gradient-to-b from-white/40 to-transparent" />
+        <div className="w-px h-8 bg-gradient-to-b from-[#F4A261]/60 to-transparent" />
       </motion.div>
     </section>
   );

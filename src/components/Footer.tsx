@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="grid md:grid-cols-[1.5fr_1fr_1fr_1fr] gap-10">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#FF4D8D] via-[#6366F1] to-[#06B6D4] flex items-center justify-center font-black">
+                <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#E63946] via-[#F4A261] to-[#2A9D8F] flex items-center justify-center font-black">
                   A
                 </span>
                 <span className="text-xl font-bold">Anirift</span>

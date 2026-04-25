@@ -29,7 +29,7 @@ export default function HowItWorks() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-14">
           <div className="section-label mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#6366F1]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#F4A261]" />
             How It Works · 使い方
           </div>
           <h2 className="text-4xl sm:text-5xl font-black tracking-tight">

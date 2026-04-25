@@ -1,10 +1,31 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Bagel_Fat_One, Reggae_One, Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+});
+
+const bagelFatOne = Bagel_Fat_One({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-bagel",
+  display: "swap",
+});
+
+const reggaeOne = Reggae_One({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-reggae",
+  display: "swap",
+});
+
+const notoSansJP = Noto_Sans_JP({
+  weight: ["400", "700", "900"],
+  subsets: ["latin"],
+  variable: "--font-noto-jp",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -28,19 +49,13 @@ export default function RootLayout({
   return (
     <html
       lang="ko"
-      className={`${inter.variable} h-full antialiased`}
+      className={`${inter.variable} ${bagelFatOne.variable} ${reggaeOne.variable} ${notoSansJP.variable} h-full antialiased`}
     >
-      <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Inter:wght@400;500;600;700;800;900&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className="min-h-full flex flex-col text-white">
+      <body className="min-h-full flex flex-col text-[#FFF8F0]">
         <div className="ambient-bg" aria-hidden="true">
-          <div className="orb" style={{ width: 520, height: 520, background: "#FF4D8D", top: "-10%", left: "-10%" }} />
-          <div className="orb" style={{ width: 480, height: 480, background: "#6366F1", top: "40%", right: "-8%", animationDelay: "4s" }} />
-          <div className="orb" style={{ width: 420, height: 420, background: "#06B6D4", bottom: "-12%", left: "25%", animationDelay: "8s" }} />
+          <div className="orb" style={{ width: 520, height: 520, background: "#E63946", top: "-10%", left: "-10%" }} />
+          <div className="orb" style={{ width: 480, height: 480, background: "#1D2B4A", top: "40%", right: "-8%", animationDelay: "4s" }} />
+          <div className="orb" style={{ width: 420, height: 420, background: "#F4A261", bottom: "-12%", left: "25%", animationDelay: "8s" }} />
         </div>
         {children}
       </body>
