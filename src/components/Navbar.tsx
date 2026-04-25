@@ -11,22 +11,22 @@ export default function Navbar() {
           <span className="font-display tracking-tight text-[20px] text-white">
             Anirift
           </span>
-          <span className="hidden sm:inline text-[12px] text-gold font-reggae ml-2">アニリフト</span>
+          <span className="hidden sm:inline text-[12px] text-gold font-han ml-2">애니리프트</span>
         </a>
 
-        <div className="hidden md:flex items-center gap-7 text-sm text-white font-reggae font-bold">
-          <a href="#featured" className="hover:text-gold">作品</a>
-          <a href="#why" className="hover:text-gold">特徴</a>
-          <a href="#popular" className="hover:text-gold">人気</a>
-          <a href="#pricing" className="hover:text-gold">料金</a>
+        <div className="hidden md:flex items-center gap-7 text-[15px] text-white font-han">
+          <a href="#featured" className="hover:text-gold">작품</a>
+          <a href="#why" className="hover:text-gold">특징</a>
+          <a href="#popular" className="hover:text-gold">인기</a>
+          <a href="#pricing" className="hover:text-gold">요금</a>
         </div>
 
         <div className="flex items-center gap-2">
-          <button className="hidden sm:inline-flex text-sm font-bold text-white hover:text-gold px-3 py-1.5">
-            Login
+          <button className="hidden sm:inline-flex text-sm font-bold text-white hover:text-gold px-3 py-1.5 font-han">
+            로그인
           </button>
-          <button className="text-sm font-black text-white bg-red border-2 border-black px-4 py-2 hover:bg-gold hover:text-black uppercase tracking-wider">
-            Start
+          <button className="text-sm font-black text-white bg-red border-2 border-black px-4 py-2 hover:bg-gold hover:text-black uppercase tracking-wider font-han">
+            START
           </button>
         </div>
       </div>

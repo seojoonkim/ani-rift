@@ -14,8 +14,8 @@
 
 @theme {
   --font-display: var(--font-bagel);
-  --font-reggae: var(--font-reggae);
-  --font-jp: var(--font-noto-jp);
+  --font-han: var(--font-black-han);
+  --font-do: var(--font-do-hyeon);
 }
 
 * {
@@ -32,7 +32,7 @@ html {
 body {
   background: var(--cream);
   color: var(--black);
-  font-family: 'Inter', 'Pretendard', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-do-hyeon), 'Do Hyeon', 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -78,6 +78,7 @@ body {
   border: 3px solid var(--black);
   text-transform: uppercase;
   letter-spacing: 0.04em;
+  font-family: var(--font-black-han), 'Black Han Sans', sans-serif;
 }
 
 .btn-primary:hover {
@@ -97,6 +98,7 @@ body {
   border: 3px solid var(--black);
   text-transform: uppercase;
   letter-spacing: 0.04em;
+  font-family: var(--font-black-han), 'Black Han Sans', sans-serif;
 }
 
 .btn-secondary:hover {
@@ -152,9 +154,9 @@ body {
   border: 2px solid var(--black);
 }
 
-/* ========== Kanji decoration (단색) ========== */
+/* ========== Korean decoration (강렬한 한국어) ========== */
 .kanji-deco {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: var(--font-black-han), 'Black Han Sans', sans-serif;
   font-weight: 900;
   opacity: 0.08;
   color: var(--black);
@@ -163,7 +165,7 @@ body {
 }
 
 .kanji-deco-light {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: var(--font-black-han), 'Black Han Sans', sans-serif;
   font-weight: 900;
   opacity: 0.12;
   color: var(--white);
@@ -195,12 +197,13 @@ body {
   letter-spacing: 0.01em;
 }
 
-.font-reggae {
-  font-family: var(--font-reggae), 'Reggae One', cursive;
+.font-han {
+  font-family: var(--font-black-han), 'Black Han Sans', sans-serif;
+  letter-spacing: -0.01em;
 }
 
-.font-jp {
-  font-family: var(--font-noto-jp), 'Noto Sans JP', sans-serif;
+.font-do {
+  font-family: var(--font-do-hyeon), 'Do Hyeon', sans-serif;
 }
 
 /* ========== Solid text colors (no gradients) ========== */

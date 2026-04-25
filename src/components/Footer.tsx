@@ -12,57 +12,57 @@ export default function Footer() {
                   A
                 </span>
                 <span className="text-xl font-black text-white">Anirift</span>
-                <span className="text-xs text-gold font-bold ml-1" style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>
-                  アニリフト
+                <span className="text-xs text-gold font-han ml-1">
+                  애니리프트
                 </span>
               </div>
-              <p className="text-sm text-white leading-relaxed max-w-sm mb-5 font-bold" style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>
-                次元を超えるアニメ体験。
+              <p className="text-xl text-white leading-relaxed max-w-sm mb-5 font-han">
+                차원을 넘는 애니 체험.
               </p>
-              <p className="text-sm text-white/80 max-w-sm font-medium">
-                차원을 넘는 애니 체험. 숏폼 애니메이션 전용 차세대 OTT.
+              <p className="text-sm text-white/80 max-w-sm font-do">
+                숏폼 애니메이션 전용 차세대 OTT.
               </p>
             </div>
 
             <div>
-              <h4 className="text-xs uppercase tracking-[0.2em] text-gold mb-4 font-black">作品 · Content</h4>
-              <ul className="space-y-2.5 text-sm text-white font-bold">
-                <li><a href="#" className="hover:text-gold">注目作品</a></li>
-                <li><a href="#" className="hover:text-gold">人気ランキング</a></li>
-                <li><a href="#" className="hover:text-gold">新着</a></li>
-                <li><a href="#" className="hover:text-gold">ジャンル</a></li>
+              <h4 className="text-xs uppercase tracking-[0.2em] text-gold mb-4 font-han">작품 · CONTENT</h4>
+              <ul className="space-y-2.5 text-sm text-white font-do">
+                <li><a href="#" className="hover:text-gold">추천 작품</a></li>
+                <li><a href="#" className="hover:text-gold">인기 랭킹</a></li>
+                <li><a href="#" className="hover:text-gold">신작</a></li>
+                <li><a href="#" className="hover:text-gold">장르별</a></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="text-xs uppercase tracking-[0.2em] text-gold mb-4 font-black">会社 · Company</h4>
-              <ul className="space-y-2.5 text-sm text-white font-bold">
-                <li><a href="#" className="hover:text-gold">About</a></li>
-                <li><a href="#" className="hover:text-gold">Careers</a></li>
-                <li><a href="#" className="hover:text-gold">Press</a></li>
-                <li><a href="#" className="hover:text-gold">Contact</a></li>
+              <h4 className="text-xs uppercase tracking-[0.2em] text-gold mb-4 font-han">회사 · COMPANY</h4>
+              <ul className="space-y-2.5 text-sm text-white font-do">
+                <li><a href="#" className="hover:text-gold">소개</a></li>
+                <li><a href="#" className="hover:text-gold">채용</a></li>
+                <li><a href="#" className="hover:text-gold">보도자료</a></li>
+                <li><a href="#" className="hover:text-gold">문의하기</a></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="text-xs uppercase tracking-[0.2em] text-gold mb-4 font-black">サポート · Support</h4>
-              <ul className="space-y-2.5 text-sm text-white font-bold">
-                <li><a href="#" className="hover:text-gold">Help Center</a></li>
-                <li><a href="#" className="hover:text-gold">Terms</a></li>
-                <li><a href="#" className="hover:text-gold">Privacy</a></li>
-                <li><a href="#" className="hover:text-gold">Cookies</a></li>
+              <h4 className="text-xs uppercase tracking-[0.2em] text-gold mb-4 font-han">지원 · SUPPORT</h4>
+              <ul className="space-y-2.5 text-sm text-white font-do">
+                <li><a href="#" className="hover:text-gold">고객센터</a></li>
+                <li><a href="#" className="hover:text-gold">이용약관</a></li>
+                <li><a href="#" className="hover:text-gold">개인정보</a></li>
+                <li><a href="#" className="hover:text-gold">쿠키정책</a></li>
               </ul>
             </div>
           </div>
 
           <div className="solid-divider my-8 bg-white" style={{ height: "3px" }} />
 
-          <div className="flex flex-wrap items-center justify-between gap-4 text-xs text-white/80 font-bold">
+          <div className="flex flex-wrap items-center justify-between gap-4 text-xs text-white/80 font-do">
             <div className="flex items-center gap-4">
               <span>© 2026 Anirift. All rights reserved.</span>
               <span className="hidden sm:inline">·</span>
-              <span style={{ fontFamily: "'Noto Sans JP', sans-serif" }} className="hidden sm:inline">
-                すべてのアニメファンへ愛を込めて 🌸
+              <span className="hidden sm:inline font-han">
+                모든 애니 팬들에게 사랑을 담아 🌸
               </span>
             </div>
 
