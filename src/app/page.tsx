@@ -1,4 +1,6 @@
+import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import Featured from "@/components/Featured";
 import Features from "@/components/Features";
 import Trending from "@/components/Trending";
 import HowItWorks from "@/components/HowItWorks";
@@ -7,13 +9,17 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="relative">
-      <Hero />
-      <Features />
-      <Trending />
-      <HowItWorks />
-      <Pricing />
-      <Footer />
-    </main>
+    <>
+      <Navbar />
+      <main className="relative">
+        <Hero />
+        <Featured />
+        <Features />
+        <Trending />
+        <HowItWorks />
+        <Pricing />
+        <Footer />
+      </main>
+    </>
   );
 }

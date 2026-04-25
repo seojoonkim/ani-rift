@@ -2,78 +2,73 @@
 
 import { motion } from "framer-motion";
 
-const steps = [
+const STEPS = [
   {
     num: "01",
-    titleJa: "登録",
-    titleKo: "가입",
-    desc: "1분이면 끝! SNS 계정으로 간편 가입",
-    icon: "📝",
+    jp: "登録する",
+    ko: "가입하기",
+    desc: "30초면 끝. 이메일만 있으면 OK.",
   },
   {
     num: "02",
-    titleJa: "探索",
-    titleKo: "탐색",
-    desc: "AI가 추천하는 맞춤 애니메이션 발견",
-    icon: "🔍",
+    jp: "好みを選ぶ",
+    ko: "취향 선택",
+    desc: "좋아하는 장르 몇 개만 체크. AI가 나머지를 책임집니다.",
   },
   {
     num: "03",
-    titleJa: "視聴",
-    titleKo: "시청",
-    desc: "3분 숏폼으로 부담 없이 정주행 시작!",
-    icon: "▶️",
+    jp: "楽しむ",
+    ko: "즐기기",
+    desc: "매일 쏟아지는 새 에피소드. 5분만 투자하세요.",
   },
 ];
 
 export default function HowItWorks() {
   return (
-    <section className="relative py-24 px-4 max-w-4xl mx-auto">
-      <motion.h2
-        className="text-center text-3xl md:text-4xl font-bold mb-4"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-      >
-        <span style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>
-          使い方
-        </span>{" "}
-        <span className="text-gray-400">/ How It Works</span>
-      </motion.h2>
+    <section className="relative py-28 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-14">
+          <div className="section-label mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#6366F1]" />
+            How It Works · 使い方
+          </div>
+          <h2 className="text-4xl sm:text-5xl font-black tracking-tight">
+            <span style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>3ステップで</span>
+            <span className="gradient-text"> 始める</span>
+          </h2>
+        </div>
 
-      <div className="flex flex-col md:flex-row items-center justify-center gap-8 mt-12">
-        {steps.map((step, i) => (
-          <motion.div
-            key={step.num}
-            className="text-center flex-1 relative"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.2, duration: 0.6 }}
-          >
-            <div className="text-5xl mb-4">{step.icon}</div>
-            <div
-              className="text-5xl font-black mb-2"
-              style={{ color: "#FF2D78", fontFamily: "'Noto Sans JP', sans-serif" }}
-            >
-              {step.num}
-            </div>
-            <h3
-              className="text-xl font-bold mb-1"
-              style={{ fontFamily: "'Noto Sans JP', sans-serif" }}
-            >
-              {step.titleJa}
-            </h3>
-            <p className="text-sm text-gray-400 mb-1">{step.titleKo}</p>
-            <p className="text-gray-300 text-sm">{step.desc}</p>
+        <div className="relative grid md:grid-cols-3 gap-5">
+          {/* Connecting line */}
+          <div className="hidden md:block absolute top-[46px] left-[16%] right-[16%] h-px bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />
 
-            {i < steps.length - 1 && (
-              <div className="hidden md:block absolute -right-4 top-1/2 text-2xl text-[#8B5CF6]">
-                →
+          {STEPS.map((step, i) => (
+            <motion.div
+              key={step.num}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: i * 0.12 }}
+              className="relative"
+            >
+              <div className="glass-card p-7 h-full">
+                <div className="flex items-center justify-between mb-5">
+                  <div className="w-11 h-11 rounded-full glass flex items-center justify-center text-sm font-black relative z-10">
+                    <span className="gradient-text">{step.num}</span>
+                  </div>
+                  <div className="text-3xl opacity-40">
+                    {i === 0 ? "✍️" : i === 1 ? "💫" : "▶️"}
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-1" style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>
+                  {step.jp}
+                </h3>
+                <div className="text-sm text-white/50 uppercase tracking-wider mb-3">{step.ko}</div>
+                <p className="text-white/70 text-sm leading-relaxed">{step.desc}</p>
               </div>
-            )}
-          </motion.div>
-        ))}
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
