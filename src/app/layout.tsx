@@ -51,12 +51,7 @@ export default function RootLayout({
       lang="ko"
       className={`${inter.variable} ${bagelFatOne.variable} ${reggaeOne.variable} ${notoSansJP.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col text-[#FFF8F0]">
-        <div className="ambient-bg" aria-hidden="true">
-          <div className="orb" style={{ width: 520, height: 520, background: "#E63946", top: "-10%", left: "-10%" }} />
-          <div className="orb" style={{ width: 480, height: 480, background: "#1D2B4A", top: "40%", right: "-8%", animationDelay: "4s" }} />
-          <div className="orb" style={{ width: 420, height: 420, background: "#F4A261", bottom: "-12%", left: "25%", animationDelay: "8s" }} />
-        </div>
+      <body className="min-h-full flex flex-col text-black bg-cream">
         {children}
       </body>
     </html>

@@ -1,10 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 pb-20 bg-cream">
       {/* Kanji decoration */}
       <div className="absolute top-[8%] right-[3%] text-[22vw] leading-none kanji-deco select-none">
         次元
@@ -16,171 +14,113 @@ export default function Hero() {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 grid lg:grid-cols-[1.1fr_1fr] gap-12 items-center">
         {/* Left: copy */}
         <div className="text-center lg:text-left">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="inline-flex mb-6"
-          >
+          <div className="inline-flex mb-6">
             <span className="section-label">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#E63946] animate-pulse" />
+              <span className="w-2 h-2 bg-red" />
               Now Streaming · 配信中
             </span>
-          </motion.div>
+          </div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-[clamp(3.5rem,10vw,8rem)] leading-[0.95] tracking-tight mb-4 font-display"
-          >
-            <span className="block gradient-text">ANI</span>
-            <span className="block gradient-text">RIFT</span>
-          </motion.h1>
+          <h1 className="text-[clamp(3.5rem,10vw,8rem)] leading-[0.9] tracking-tight mb-4 font-display text-black">
+            <span className="block">ANI</span>
+            <span className="block">RIFT</span>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.25 }}
-            className="text-lg sm:text-xl text-[#FFF8F0]/85 mb-3 font-reggae"
-          >
+          <p className="text-lg sm:text-xl text-navy mb-3 font-reggae font-bold">
             次元を超えるアニメ体験。
-          </motion.p>
+          </p>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-            className="text-base sm:text-lg text-[#FFF8F0]/60 mb-10 max-w-xl mx-auto lg:mx-0"
-          >
+          <p className="text-base sm:text-lg text-black mb-10 max-w-xl mx-auto lg:mx-0 font-medium">
             차원을 넘는 애니 체험. 숏폼 애니메이션 전용 OTT,{" "}
-            <span className="text-[#F4A261] font-semibold">매주 새로운 에피소드</span>가 당신을 기다립니다.
-          </motion.p>
+            <span className="text-red font-black bg-black px-1.5 text-white">매주 새로운 에피소드</span>가 당신을 기다립니다.
+          </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.4 }}
-            className="flex flex-wrap gap-3 justify-center lg:justify-start"
-          >
+          <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
             <button className="btn-primary">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M8 5v14l11-7z" />
               </svg>
               Start Watching · 今すぐ始める
             </button>
-            <button className="btn-glass">
+            <button className="btn-secondary">
               Explore · 作品を見る
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" aria-hidden="true">
                 <path d="M5 12h14M13 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </button>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.7, delay: 0.6 }}
-            className="mt-12 flex items-center gap-6 justify-center lg:justify-start text-sm text-[#FFF8F0]/55"
-          >
+          <div className="mt-12 flex items-center gap-6 justify-center lg:justify-start text-sm text-black font-bold">
             <div className="flex items-center gap-2">
               <div className="flex -space-x-2">
-                <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[#E63946] to-[#F4A261] border-2 border-[#0D1117]" />
-                <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[#1D2B4A] to-[#2A9D8F] border-2 border-[#0D1117]" />
-                <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[#F4A261] to-[#E63946] border-2 border-[#0D1117]" />
+                <div className="w-8 h-8 rounded-full bg-red border-2 border-black" />
+                <div className="w-8 h-8 rounded-full bg-mint border-2 border-black" />
+                <div className="w-8 h-8 rounded-full bg-gold border-2 border-black" />
               </div>
               <span>
-                <span className="text-[#FFF8F0] font-bold">120K+</span> watching now
+                <span className="font-black">120K+</span> watching now
               </span>
             </div>
             <div className="hidden sm:flex items-center gap-1.5">
-              <span className="text-[#F4A261]">★</span>
-              <span><span className="text-[#FFF8F0] font-bold">4.9</span> · 評価</span>
+              <span className="text-red text-lg">★</span>
+              <span><span className="font-black">4.9</span> · 評価</span>
             </div>
-          </motion.div>
+          </div>
         </div>
 
-        {/* Right: floating glass posters */}
+        {/* Right: flat pop-art posters */}
         <div className="relative h-[520px] lg:h-[600px] hidden md:block">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.3 }}
-            className="absolute left-[2%] top-[12%] w-[42%] float-1"
-          >
-            <div className="poster poster-2 poster-glow">
+          <div className="absolute left-[2%] top-[12%] w-[42%]">
+            <div className="poster poster-2">
               <div className="absolute inset-0 flex flex-col justify-end p-4 z-10">
-                <span className="text-[10px] tracking-widest text-[#F4A261] uppercase mb-1 font-bold">Episode 03</span>
-                <span className="text-[#FFF8F0] font-bold text-sm font-reggae">星の記憶</span>
-                <span className="text-[#FFF8F0]/65 text-xs">별의 기억</span>
+                <span className="text-[10px] tracking-widest text-black uppercase mb-1 font-black bg-white px-1.5 py-0.5 self-start">Episode 03</span>
+                <span className="text-black font-black text-base font-reggae mt-2">星の記憶</span>
+                <span className="text-black text-xs font-bold">별의 기억</span>
               </div>
-              <div className="absolute inset-0 shimmer pointer-events-none" />
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.15 }}
-            className="absolute left-1/2 top-[4%] -translate-x-1/2 w-[48%] z-20 float-2"
-          >
-            <div className="poster poster-7 poster-glow">
+          <div className="absolute left-1/2 top-[4%] -translate-x-1/2 w-[48%] z-20">
+            <div className="poster poster-7">
               <div className="absolute top-3 left-3 z-10">
-                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#E63946] backdrop-blur-md text-[#FFF8F0]">NEW · 新作</span>
+                <span className="text-[10px] font-black px-2 py-1 bg-black text-white border-2 border-black">NEW · 新作</span>
               </div>
               <div className="absolute inset-0 flex flex-col justify-end p-4 z-10">
-                <span className="text-[10px] tracking-widest text-[#F4A261] uppercase mb-1 font-bold">Featured</span>
-                <span className="text-[#FFF8F0] text-lg font-reggae">桜夜の刃</span>
-                <span className="text-[#FFF8F0]/75 text-xs">사쿠라 밤의 칼날</span>
+                <span className="text-[10px] tracking-widest text-white uppercase mb-1 font-black bg-black px-1.5 py-0.5 self-start">Featured</span>
+                <span className="text-white text-xl font-reggae mt-2">桜夜の刃</span>
+                <span className="text-white text-xs font-bold">사쿠라 밤의 칼날</span>
               </div>
-              <div className="absolute inset-0 shimmer pointer-events-none" />
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.45 }}
-            className="absolute right-[2%] top-[18%] w-[42%] float-3"
-          >
-            <div className="poster poster-3 poster-glow">
+          <div className="absolute right-[2%] top-[18%] w-[42%]">
+            <div className="poster poster-3">
               <div className="absolute inset-0 flex flex-col justify-end p-4 z-10">
-                <span className="text-[10px] tracking-widest text-[#F4A261] uppercase mb-1 font-bold">Episode 07</span>
-                <span className="text-[#FFF8F0] font-bold text-sm font-reggae">電脳東京2089</span>
-                <span className="text-[#FFF8F0]/65 text-xs">전뇌 도쿄 2089</span>
+                <span className="text-[10px] tracking-widest text-black uppercase mb-1 font-black bg-black text-white px-1.5 py-0.5 self-start">Episode 07</span>
+                <span className="text-black font-black text-base font-reggae mt-2">電脳東京2089</span>
+                <span className="text-black text-xs font-bold">전뇌 도쿄 2089</span>
               </div>
-              <div className="absolute inset-0 shimmer pointer-events-none" />
             </div>
-          </motion.div>
+          </div>
 
-          {/* Glass info card */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.65 }}
-            className="absolute bottom-[2%] left-1/2 -translate-x-1/2 glass-strong px-5 py-3 flex items-center gap-3 whitespace-nowrap"
-          >
-            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#E63946] to-[#F4A261] flex items-center justify-center text-xs font-black text-[#FFF8F0]">
+          {/* Flat info card */}
+          <div className="absolute bottom-[2%] left-1/2 -translate-x-1/2 bg-white border-4 border-black px-5 py-3 flex items-center gap-3 whitespace-nowrap">
+            <div className="w-9 h-9 bg-red border-2 border-black flex items-center justify-center text-sm font-black text-white">
               ▶
             </div>
             <div className="text-left">
-              <div className="text-[10px] uppercase tracking-widest text-[#F4A261]">Playing Next</div>
-              <div className="text-sm font-bold font-reggae">桜夜の刃 — EP.04</div>
+              <div className="text-[10px] uppercase tracking-widest text-black font-black">Playing Next</div>
+              <div className="text-sm font-black font-reggae text-black">桜夜の刃 — EP.04</div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Scroll hint */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1 }}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 text-[#F4A261]/60 text-[11px] tracking-[0.3em] uppercase flex flex-col items-center gap-2"
-      >
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-black text-[11px] tracking-[0.3em] uppercase flex flex-col items-center gap-2 font-black">
         <span>Scroll</span>
-        <div className="w-px h-8 bg-gradient-to-b from-[#F4A261]/60 to-transparent" />
-      </motion.div>
+        <div className="w-1 h-8 bg-black" />
+      </div>
     </section>
   );
 }

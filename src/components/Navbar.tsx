@@ -1,42 +1,35 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 export default function Navbar() {
   return (
-    <motion.nav
-      initial={{ y: -30, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: [0.2, 0.8, 0.2, 1] }}
-      className="fixed top-5 left-1/2 -translate-x-1/2 z-50 w-[min(92%,880px)]"
-    >
-      <div className="glass-nav flex items-center justify-between px-5 py-2.5">
+    <nav className="sticky top-0 left-0 right-0 z-50 bg-navy border-b-4 border-black">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         <a href="#" className="flex items-center gap-2">
-          <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#E63946] to-[#F4A261] flex items-center justify-center text-base font-black text-[#FFF8F0] font-display">
+          <span className="w-10 h-10 bg-red border-2 border-black flex items-center justify-center text-lg font-black text-white font-display">
             A
           </span>
-          <span className="font-display tracking-tight text-[18px] text-[#FFF8F0]">
+          <span className="font-display tracking-tight text-[20px] text-white">
             Anirift
           </span>
-          <span className="hidden sm:inline text-[11px] text-[#F4A261]/70 font-reggae ml-1">アニリフト</span>
+          <span className="hidden sm:inline text-[12px] text-gold font-reggae ml-2">アニリフト</span>
         </a>
 
-        <div className="hidden md:flex items-center gap-6 text-sm text-[#FFF8F0]/75 font-reggae">
-          <a href="#featured" className="hover:text-[#F4A261] transition-colors">作品</a>
-          <a href="#why" className="hover:text-[#F4A261] transition-colors">特徴</a>
-          <a href="#popular" className="hover:text-[#F4A261] transition-colors">人気</a>
-          <a href="#pricing" className="hover:text-[#F4A261] transition-colors">料金</a>
+        <div className="hidden md:flex items-center gap-7 text-sm text-white font-reggae font-bold">
+          <a href="#featured" className="hover:text-gold">作品</a>
+          <a href="#why" className="hover:text-gold">特徴</a>
+          <a href="#popular" className="hover:text-gold">人気</a>
+          <a href="#pricing" className="hover:text-gold">料金</a>
         </div>
 
         <div className="flex items-center gap-2">
-          <button className="hidden sm:inline-flex text-sm text-[#FFF8F0]/75 hover:text-[#F4A261] px-3 py-1.5 transition-colors">
+          <button className="hidden sm:inline-flex text-sm font-bold text-white hover:text-gold px-3 py-1.5">
             Login
           </button>
-          <button className="text-sm font-bold text-[#FFF8F0] bg-gradient-to-r from-[#E63946] to-[#C1121F] px-4 py-1.5 rounded-full shadow-[0_4px_16px_rgba(230,57,70,0.4)] hover:shadow-[0_6px_24px_rgba(244,162,97,0.55)] hover:from-[#F4A261] hover:to-[#E63946] transition-all">
+          <button className="text-sm font-black text-white bg-red border-2 border-black px-4 py-2 hover:bg-gold hover:text-black uppercase tracking-wider">
             Start
           </button>
         </div>
       </div>
-    </motion.nav>
+    </nav>
   );
 }
