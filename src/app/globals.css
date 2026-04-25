@@ -1,0 +1,195 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0f;
+  --foreground: #ffffff;
+  --neon-pink: #FF2D78;
+  --cyber-blue: #00D4FF;
+  --electric-purple: #8B5CF6;
+  --neon-green: #39FF14;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', 'Pretendard', 'Noto Sans JP', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Halftone pattern */
+.halftone-bg {
+  background-image: radial-gradient(circle, rgba(255, 45, 120, 0.08) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Speed lines */
+@keyframes speed-lines {
+  0% { transform: translateX(-100%); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateX(100vw); opacity: 0; }
+}
+
+.speed-line {
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--neon-pink), transparent);
+  animation: speed-lines 2s linear infinite;
+}
+
+/* Glitch effect */
+@keyframes glitch-1 {
+  0%, 100% { clip-path: inset(0 0 0 0); transform: translate(0); }
+  20% { clip-path: inset(20% 0 60% 0); transform: translate(-3px, 2px); }
+  40% { clip-path: inset(40% 0 30% 0); transform: translate(3px, -1px); }
+  60% { clip-path: inset(60% 0 10% 0); transform: translate(-2px, 3px); }
+  80% { clip-path: inset(10% 0 70% 0); transform: translate(2px, -2px); }
+}
+
+@keyframes glitch-2 {
+  0%, 100% { clip-path: inset(0 0 0 0); transform: translate(0); }
+  20% { clip-path: inset(50% 0 20% 0); transform: translate(3px, -2px); }
+  40% { clip-path: inset(10% 0 60% 0); transform: translate(-3px, 1px); }
+  60% { clip-path: inset(70% 0 5% 0); transform: translate(2px, -3px); }
+  80% { clip-path: inset(30% 0 40% 0); transform: translate(-2px, 2px); }
+}
+
+.glitch {
+  position: relative;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch::before {
+  color: var(--cyber-blue);
+  animation: glitch-1 3s infinite;
+  z-index: -1;
+}
+
+.glitch::after {
+  color: var(--neon-pink);
+  animation: glitch-2 3s infinite;
+  z-index: -1;
+}
+
+/* Neon glow text */
+.neon-text {
+  text-shadow:
+    0 0 7px var(--neon-pink),
+    0 0 10px var(--neon-pink),
+    0 0 21px var(--neon-pink),
+    0 0 42px var(--neon-pink);
+}
+
+.neon-text-blue {
+  text-shadow:
+    0 0 7px var(--cyber-blue),
+    0 0 10px var(--cyber-blue),
+    0 0 21px var(--cyber-blue);
+}
+
+.neon-text-green {
+  text-shadow:
+    0 0 7px var(--neon-green),
+    0 0 10px var(--neon-green),
+    0 0 21px var(--neon-green);
+}
+
+/* Neon border glow */
+.neon-border {
+  box-shadow:
+    0 0 5px var(--neon-pink),
+    inset 0 0 5px var(--neon-pink);
+  border: 1px solid var(--neon-pink);
+}
+
+.neon-border-blue {
+  box-shadow:
+    0 0 5px var(--cyber-blue),
+    inset 0 0 5px rgba(0, 212, 255, 0.1);
+  border: 1px solid var(--cyber-blue);
+}
+
+/* Anime card style */
+.anime-card {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(255, 45, 120, 0.05));
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  transition: all 0.3s ease;
+}
+
+.anime-card:hover {
+  border-color: var(--neon-pink);
+  box-shadow: 0 0 20px rgba(255, 45, 120, 0.2);
+  transform: translateY(-4px);
+}
+
+/* Scanline overlay */
+.scanlines::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.1) 2px,
+    rgba(0, 0, 0, 0.1) 4px
+  );
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Pulse animation for CTA */
+@keyframes pulse-neon {
+  0%, 100% { box-shadow: 0 0 5px var(--neon-pink), 0 0 10px var(--neon-pink); }
+  50% { box-shadow: 0 0 10px var(--neon-pink), 0 0 20px var(--neon-pink), 0 0 30px var(--neon-pink); }
+}
+
+.pulse-cta {
+  animation: pulse-neon 2s ease-in-out infinite;
+}
+
+/* Kanji decoration */
+.kanji-deco {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 900;
+  opacity: 0.05;
+  user-select: none;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--neon-pink);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cyber-blue);
+}
